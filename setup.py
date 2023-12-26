@@ -1,12 +1,12 @@
 import setuptools
 
-with open("README.md", "r") as fh:
+with open("/Users/ranul/Projects/FYP/SciDownl/README.md", "r") as fh:
     long_description = fh.read()
 
-with open("VERSION", "r") as f:
+with open("/Users/ranul/Projects/FYP/SciDownl/VERSION", "r") as f:
     version = f.read().strip()
 
-with open("requirements.txt", "r") as f:
+with open("/Users/ranul/Projects/FYP/SciDownl/requirements.txt", "r") as f:
     install_requires = f.readlines()
 
 setuptools.setup(

@@ -54,12 +54,13 @@ class ScihubTask(BaseTask):
 
         for i, scihub_url in enumerate(self.scihub_url_chooser):
             try:
-                logger.info(f"Choose scihub url [{i}]: {scihub_url.url}")
+                # logger.info(f"Choose scihub url [{i}]: {scihub_url.url}")
                 return self._run(scihub_url.url)
             except Exception as e:
-                logger.warning(f"Error occurs, task status: {self.context['status']}, error: {self.context['error']}")
+                # logger.warning(f"Error occurs, task status: {self.context['status']}, error: {self.context['error']}")
                 continue
         logger.error(f"Failed to download the paper: {self.source_keyword}. Please try again.")
+        return 0
 
     def _run(self, scihub_url):
         source = self.source_class(self.source_keyword)
